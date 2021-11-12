@@ -71,5 +71,98 @@ public class Start {
 		System.out.println("la media del array dinamimco es: " + mediaD);
 
 	}
+	
+	//********************************************************FUNCTIONS ARRAYS 1, 2 Y 3 DIMENCIONES*********************************
+	
+	public void arraysUnoDosTresDimensiopnes() {
+
+		Scanner scrIn = new Scanner(System.in);
+		int i, j, k;
+			
+		//Version1***************************************************************************************************
+		System.out.println("Array unidiminsional");
+		String []  nombres= {"pepito", "juanito", "torito", "carlitos"};
+		for(i=0; i<nombres.length; i++) {
+			System.out.println("Los nombres del array unidimesional son: "+nombres[i]);
+		}
+		System.out.println("");
+		
+		System.out.println("Array bidimensional");
+		String [] [] ingredientes= {{"jamon", "champiñon", "queso", "tomate", "piña", "york", "bacon", "salami"}};
+		for(i=0; i<ingredientes.length; i++) {
+			for(j=0; j<ingredientes[i].length; j++) {
+				System.out.println("Los nombres del array bidemencional son: "+ingredientes[i][j]);
+			}
+			System.out.println("");
+		}
+		
+		System.out.println("");
+		
+		System.out.println("Array tridimencionales");
+		int [] [] [] notas= {{{2,4,6,8,5,6,9,7,8,9,10,10,2,4,5,7}}};
+		for(i=0; i<notas.length; i++) {
+			for(j=0; j<notas[i].length; j++) {
+				for(k=0; k<notas[i][j].length; k++) {
+					System.out.println("Los nombres del array tridimensional son: "+notas[i][j][k]);
+				}
+				System.out.println("");
+			}
+			System.out.println("");
+
+		}
+		
+		//version2******************************************************************************************
+		System.out.println("Array unidiminsional");
+		String [] apellidos = new String[4];
+		for(i=0; i<apellidos.length; i++) {
+			System.out.println("Introduzca el apellido de: " + (i + 1) + " : ");
+			apellidos[i] = scrIn.next();
+		}
+		for(i=0; i<apellidos.length; i++) {
+			System.out.println("Los apellidos del array unidimesional son: "+apellidos[i]);
+		}
+		System.out.println("");
+		
+		
+		
+		System.out.println("Array bidimensional");
+		String [][] colores = new String[4][2];
+		for(i=0; i<colores.length; i++) {
+			for(j=0; j<colores[i].length; j++) {
+				System.out.println("Introduzca el color "+ (i+1) + " , " + (j+1)+ " : ");
+				colores[i][j] = scrIn.next();
+				System.out.println("");
+			}
+		}
+		for(i=0; i<colores.length; i++) {
+			for(j=0; j<colores[i].length; j++) {
+				System.out.println("Los colores del array bidemencional son: "+colores[i][j]);
+			}
+			System.out.println("");
+		}
+		System.out.println("");
+		
+		
+		System.out.println("Array tridimencional");
+		int [][][] usuarios = new int[3][2][4];
+		for(i=0; i<usuarios.length; i++) {
+			for(j=0; j<usuarios[i].length; j++) {
+				for(k=0; k<usuarios[i][j].length; k++) {
+					System.out.println("Introduzca el usario "+ (i+1) + " , " + (j+1)+ " , "+ (k+1)+" : ");
+					usuarios[i][j][k] = scrIn.nextInt();
+				}
+				System.out.println("");
+			}
+		}
+		for(i=0; i<usuarios.length; i++) {
+			for(j=0; j<usuarios[i].length; j++) {
+				for(k=0; k<usuarios[i][j].length; k++) {
+					System.out.println("Los usuarios del array tridimensional son: "+usuarios[i][j][k]);
+				}
+				System.out.println("");
+			}
+			System.out.println("");
+		}
+	}
 
 }
